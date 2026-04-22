@@ -13,7 +13,7 @@ input_text = st.text_area("Input text in English:", height=150)
 
 if st.button("Translate"):
     if input_text:
-        with st.spinner('Trwa generowanie tłumaczenia...'):
+        with st.spinner('Translating, please wait...'):
             try:
                 model_name = "Helsinki-NLP/opus-mt-en-de"
                 tokenizer = AutoTokenizer.from_pretrained(model_name)
