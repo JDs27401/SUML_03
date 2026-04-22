@@ -20,7 +20,7 @@ if st.button("Translate"):
                 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
                 inputs = tokenizer(input_text, return_tensors="pt")
-                outputs = model.generate(inputs)
+                outputs = model.generate(**inputs)
                 output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
                 st.success("Translation finished")
